@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Wonders of Tunisia
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let city of cities">
+          <ion-thumbnail item-left>
+            <img>
+          </ion-thumbnail>
+          <h2 text-wrap>{{city.name}}</h2>
+          <p>{{city.description}}</p>
+        </button>
+      </ion-list>
+</ion-content>
