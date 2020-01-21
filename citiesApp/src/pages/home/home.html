@@ -10,7 +10,7 @@
     <ion-list>
         <button ion-item *ngFor="let city of cities">
           <ion-thumbnail item-left>
-            <img>
+            <img img-cache img-cache-src="{{objectStorageAccess.baseUrl}}{{city.picture.thumbnail}}">
           </ion-thumbnail>
           <h2 text-wrap>{{city.name}}</h2>
           <p>{{city.description}}</p>

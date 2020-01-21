@@ -10,7 +10,7 @@ export class TunisianCitiesDataProvider {
   data: any = null;
   objectStorageAccess: any = null;
 
-  constructor() { //private transfer: FileTransfer
+  constructor() { 
     console.log('--> TunisianCitiesDataProvider constructor() called');
   }
 
@@ -20,7 +20,7 @@ export class TunisianCitiesDataProvider {
       if (this.data) {
         return resolve(this.data);
       }
-      this.data = [
+      /* this.data = [
         {
           "name": "Carthage",
           "picture": "Carthage.jpg",
@@ -41,7 +41,7 @@ export class TunisianCitiesDataProvider {
           "picture": "Hammamet.jpg",
           "description": "Hectic resort in summer, well known for its beaches and its party atmosphere, Hammamet is also a small city with an authentic charm. Turquoise waters, the scent of jasmine, white houses and stone walls gilded by the centuries…"
         },
-    ];
+    ]; */
     resolve(this.data);
       let dataRequest = new WLResourceRequest("/adapters/TunisianCities", WLResourceRequest.GET);
       dataRequest.send().then(

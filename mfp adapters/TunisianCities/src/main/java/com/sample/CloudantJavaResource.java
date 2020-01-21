@@ -20,7 +20,7 @@ import com.ibm.mfp.adapter.api.AdaptersAPI;
 import com.ibm.mfp.adapter.api.OAuthSecurity;
 
 @Path("/")
-@OAuthSecurity(scope = "UserLogin")
+//@OAuthSecurity(scope = "UserLogin")
 public class CloudantJavaResource {
 
 	@Context
@@ -35,6 +35,7 @@ public class CloudantJavaResource {
 	}
 
 	@GET
+	@Path("/")
 	@Produces("application/json")
 	public Response getAllEntries() throws Exception {
 		List<TunisianCity> entries = getDB().view("_all_docs").includeDocs(true).query(TunisianCity.class);
